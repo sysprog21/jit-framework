@@ -2175,7 +2175,6 @@ void _ir_MERGE_SET_OP(ir_ctx *ctx, ir_ref merge, ir_ref pos, ir_ref src)
 	ir_insn *insn = &ctx->ir_base[merge];
 	ir_ref *ops = insn->ops;
 
-	IR_ASSERT(insn->op == IR_MERGE || insn->op == IR_LOOP_BEGIN);
 	IR_ASSERT(pos > 0 && pos <= insn->inputs_count);
 	ops[pos] = src;
 }

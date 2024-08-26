@@ -1833,7 +1833,7 @@ int ir_schedule_blocks(ir_ctx *ctx)
 	 *
 	 * TODO: make the choice between top-down and bottom-up algorithm configurable
 	 */
-	if (UNEXPECTED(ctx->flags2 & IR_IRREDUCIBLE_CFG) || ctx->cfg_blocks_count > 256) {
+	if (1) {
 		return ir_schedule_blocks_top_down(ctx);
 	} else {
 		return ir_schedule_blocks_bottom_up(ctx);
